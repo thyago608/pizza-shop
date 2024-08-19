@@ -15,7 +15,6 @@ import {
   YAxis,
   CartesianGrid,
   Line,
-  Tooltip,
 } from 'recharts'
 
 const data = [
@@ -42,6 +41,8 @@ export function RevenueChart() {
       <CardContent>
         <ResponsiveContainer width="100%" height={240}>
           <LineChart data={data} style={{ fontSize: 12 }}>
+            <CartesianGrid vertical={false} className="stroke-muted" />
+
             <XAxis dataKey="date" tickLine={false} axisLine={false} dy={16} />
             <YAxis
               stroke="#888"
