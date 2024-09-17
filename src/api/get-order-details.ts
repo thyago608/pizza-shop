@@ -4,8 +4,15 @@ type GetOrderDetailsParams = {
   orderId: string
 }
 
+export type OrderStatus =
+  | 'pending'
+  | 'canceled'
+  | 'processing'
+  | 'delivering'
+  | 'delivered'
+
 type GetOrderDetailsResponse = {
-  status: 'pending' | 'canceled' | 'processing' | 'delivering' | 'delivered'
+  status: OrderStatus
   id: string
   createdAt: string
   totalInCents: number
