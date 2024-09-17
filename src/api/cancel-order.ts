@@ -5,5 +5,5 @@ type CancelOrderParams = {
 }
 
 export async function cancelOrder({ orderId }: CancelOrderParams) {
-  await api.put(`/orders/${orderId}/cancel`)
+  await api.patch(`/orders/${orderId}/cancel`)
 }

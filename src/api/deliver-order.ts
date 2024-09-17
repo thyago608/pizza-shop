@@ -5,5 +5,5 @@ type DeliverOrderParams = {
 }
 
 export async function deliverOrder({ orderId }: DeliverOrderParams) {
-  await api.put(`/orders/${orderId}/deliver`)
+  await api.patch(`/orders/${orderId}/deliver`)
 }

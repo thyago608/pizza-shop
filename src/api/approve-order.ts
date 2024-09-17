@@ -5,5 +5,5 @@ type ApproveOrderParams = {
 }
 
 export async function approveOrder({ orderId }: ApproveOrderParams) {
-  await api.put(`/orders/${orderId}/approve`)
+  await api.patch(`/orders/${orderId}/approve`)
 }

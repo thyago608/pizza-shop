@@ -5,5 +5,5 @@ type DispatchOrderParams = {
 }
 
 export async function dispatchOrder({ orderId }: DispatchOrderParams) {
-  await api.put(`/orders/${orderId}/dispatch`)
+  await api.patch(`/orders/${orderId}/dispatch`)
 }
